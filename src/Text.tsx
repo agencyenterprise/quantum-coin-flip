@@ -233,6 +233,9 @@ const Text = () => (
     </ul>
 
     <div class="footnotes">
+    
+    <p><sup>Important Note: This is a purely educational site and should not be relied on for anything commercial in any way. </sup></p>
+
     <p><sup>1</sup>&nbsp;I wonder how they handle lotteries for enrollment times?</p>
     <p>
       <sup>2</sup>&nbsp;Yes, I acknowledge that IBM&rsquo;s current machines have queue times, your results might have been
