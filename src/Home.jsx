@@ -55,7 +55,7 @@ class Home extends Nullstack {
       <>
         <div id="header">
           <a href="https://ae.studio/quantum-computing" target="_blank">
-            <img src="aestudio-logo-light.svg" width={150} />
+            <img src="aestudio-logo-dark.svg" width={150} />
           </a>
           <a href="https://github.com/agencyenterprise/quantum-coin-flip" target="_blank">
             <img id="github-logo" src="github.png" />
