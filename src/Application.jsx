@@ -1,6 +1,8 @@
 import Nullstack from "nullstack";
 import Home from "./Home";
 
+import "./styles.css";
+
 class Application extends Nullstack {
   prepare({ page }) {
     page.locale = "en-US";
@@ -13,10 +15,25 @@ class Application extends Nullstack {
     return (
       <head>
         <link href="https://fonts.gstatic.com" rel="preconnect" />
-        <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;800&display=swap" rel="stylesheet" />
-        <link href="styles.css" rel="stylesheet" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;800&display=swap"
+          rel="stylesheet"
+        />
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/gh/agencyenterprise/sds-utils@latest/dist/packages/badge/src/lib/badge.css"
+        />
+        <script src="https://cdn.jsdelivr.net/gh/agencyenterprise/sds-utils@latest/dist/packages/badge/src/lib/badge.js" />
       </head>
     );
+  }
+
+  hydrate() {
+    SDSUtilsBadge({
+      expandable: true,
+      location: "bottomright",
+      position: "fixed",
+    }).then(console.log("done"));
   }
 
   render() {
