@@ -24,6 +24,7 @@ class Application extends Nullstack {
           href="https://cdn.jsdelivr.net/gh/agencyenterprise/sds-utils@latest/dist/packages/badge/src/lib/badge.css"
         />
         <script src="https://cdn.jsdelivr.net/gh/agencyenterprise/sds-utils@latest/dist/packages/badge/src/lib/badge.js" />
+        <link href="styles.css" rel="stylesheet" />
       </head>
     );
   }
