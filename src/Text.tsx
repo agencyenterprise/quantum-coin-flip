@@ -3,7 +3,7 @@ import SectionTitle from './SectionTitle';
 const Text = () => (
   <>
     <p>
-      <i>You just witnessed a quantum coin toss.</i>
+      <i>If you clicked that coin, you just witnessed a quantum coin flip; the most random coin flip on the internet.</i>
     </p>
 
     <SectionTitle id="what-does-that-mean">What does that mean?</SectionTitle>
