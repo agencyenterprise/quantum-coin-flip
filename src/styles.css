@@ -42,7 +42,7 @@ main {
   color: red;
 }
 
-#header {
+.header {
   position: fixed;
   top: 0;
   padding: 10px 20px;
@@ -52,7 +52,7 @@ main {
 }
 
 @media only screen and (max-width: 1100px) {
-  #header {
+  .header {
     position: absolute;
   }
 }

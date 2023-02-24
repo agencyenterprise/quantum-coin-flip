@@ -55,7 +55,6 @@ class Home extends Nullstack {
       <>
         <div id="header">
           <a href="https://github.com/agencyenterprise/quantum-coin-flip" target="_blank">
-            <img id="github-logo" src="github.png" />
           </a>
         </div>
         <section id="coin-toss">
