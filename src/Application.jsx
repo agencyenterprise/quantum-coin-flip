@@ -28,13 +28,7 @@ class Application extends Nullstack {
     );
   }
 
-  hydrate() {
-    SDSUtilsBadge({
-      expandable: true,
-      location: "bottomright",
-      position: "fixed",
-    }).then(console.log("done"));
-  }
+  hydrate() {}
 
   render() {
     return (
