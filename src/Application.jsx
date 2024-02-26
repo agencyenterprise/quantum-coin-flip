@@ -22,7 +22,7 @@ class Application extends Nullstack {
           rel="stylesheet"
         />
         <script src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
-        <script src="../scripts/posthog.js" />
+        <script src="https://www.quantumcoinflip.com/posthog.js" />
         <link href="styles.css" rel="stylesheet" />
       </head>
     );
