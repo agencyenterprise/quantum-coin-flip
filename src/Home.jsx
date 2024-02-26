@@ -63,7 +63,7 @@ class Home extends Nullstack {
         <a
           target="_blank"
           rel="norefferer"
-          href="https://ae.studio/quantum-computing?utm_source=sds&utm_medium=referral&utm_campaign=quantumcoinflip&utm_content=top-bar&utm_term=3ff5251a-e107-4d47-bfb8-b2962debd252"
+          href="https://ae.studio/data-science?utm_source=sds&utm_medium=referral&utm_campaign=quantumcoinflip&utm_content=top-bar&utm_term=3ff5251a-e107-4d47-bfb8-b2962debd252"
         >
           <img src="/ae.svg" class="absolute left-6 invert h-10 top-6" />
         </a>
