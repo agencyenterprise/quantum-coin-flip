@@ -1,7 +1,7 @@
 import Nullstack from "nullstack";
 import Caret from "./Caret";
-import Text from "./Text";
 import SectionTitle from "./SectionTitle";
+import Text from "./Text";
 
 class Home extends Nullstack {
   animating = false;
@@ -11,7 +11,10 @@ class Home extends Nullstack {
 
   static async getResult({ database }) {
     const flips = database.collection("flips");
-    const flip = await flips.findOneAndUpdate({ hasBeenUsed: false }, { $set: { hasBeenUsed: true } });
+    const flip = await flips.findOneAndUpdate(
+      { hasBeenUsed: false },
+      { $set: { hasBeenUsed: true } }
+    );
     if (flip.value) {
       return flip.value.result;
     }
@@ -50,13 +53,20 @@ class Home extends Nullstack {
     const animatingClass = this.animating ? "animating" : "";
     const flippingClass = this.flipping ? "flipping" : "";
     const flippedClass =
-      !this.flipping && this.flipResult ? (this.flipResult === "heads" ? "flipped-heads" : "flipped-tails") : "";
+      !this.flipping && this.flipResult
+        ? this.flipResult === "heads"
+          ? "flipped-heads"
+          : "flipped-tails"
+        : "";
     return (
       <>
-        <div id="header">
-          <a href="https://github.com/agencyenterprise/quantum-coin-flip" target="_blank">
-          </a>
-        </div>
+        <a
+          target="_blank"
+          rel="norefferer"
+          href="https://ae.studio/quantum-computing?utm_source=sds&utm_medium=referral&utm_campaign=quantumcoinflip&utm_content=top-bar&utm_term=3ff5251a-e107-4d47-bfb8-b2962debd252"
+        >
+          <img src="/ae.svg" class="absolute left-6 invert h-10 top-6" />
+        </a>
         <section id="coin-toss">
           <div id="flipped-text-heads" class={flippedClass}>
             Heads
@@ -64,7 +74,11 @@ class Home extends Nullstack {
           <div id="flipped-text-tails" class={flippedClass}>
             Tails
           </div>
-          <div id="coin" class={`${animatingClass} ${flippingClass} ${flippedClass}`} onclick={this.toss}>
+          <div
+            id="coin"
+            class={`${animatingClass} ${flippingClass} ${flippedClass}`}
+            onclick={this.toss}
+          >
             <div class="heads">
               <div class="internal">{"|1>"}</div>
             </div>
@@ -73,7 +87,10 @@ class Home extends Nullstack {
             </div>
           </div>
           <div id="diagram">
-            <div id="qubit" class={`${animatingClass} ${flippingClass} ${flippedClass}`}>
+            <div
+              id="qubit"
+              class={`${animatingClass} ${flippingClass} ${flippedClass}`}
+            >
               <div id="qubit-dot" />
               <div id="qubit-text">
                 <div id="qubit-text-root2-0">
@@ -90,7 +107,9 @@ class Home extends Nullstack {
             <hr />
             <div id="hadamard">H</div>
             <img id="measurement" src="measurement.png" />
-            {!this.hasClicked && <div id="click-to-flip">Click the coin to flip it</div>}
+            {!this.hasClicked && (
+              <div id="click-to-flip">Click the coin to flip it</div>
+            )}
           </div>
           <Caret />
           <SectionTitle id="whats-going-on">What's going on?</SectionTitle>
